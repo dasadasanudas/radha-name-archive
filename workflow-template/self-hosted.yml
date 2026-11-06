@@ -1,0 +1,49 @@
+name: Radha archive (own PC)
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: index (find files) or download (save documents to your PC)
+        type: choice
+        options: [index, download]
+        default: index
+      limit:
+        description: Pages (index) or files (download) per run
+        type: number
+        default: 40
+      folder:
+        description: Folder on your PC for downloaded files
+        default: ~/radha-name-files
+permissions:
+  contents: write
+concurrency:
+  group: radha-archive
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: self-hosted
+    timeout-minutes: 720
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run archiver
+        shell: bash
+        env:
+          MODE: ${{ inputs.mode }}
+          LIMIT: ${{ inputs.limit }}
+          FOLDER: ${{ inputs.folder }}
+        run: python archiver.py --mode "$MODE" --limit "$LIMIT" --dest "$FOLDER"
+      - name: Save progress notes to the repo
+        if: always()
+        shell: bash
+        run: |
+          git add crawl-manifest.json download-summary.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Save archive progress"
+            git pull --rebase
+            git push
+          fi
