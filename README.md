@@ -1,13 +1,9 @@
-# Radha.name archive (runs on your own PC)
+# Radha.name archive notes
 
-Public repo. It holds the archiver code and progress notes only. Downloaded documents are saved to a folder on your PC, not to GitHub, so the 40 GB library never hits GitHub's size limits.
+Public repo with archiver code and progress notes. No documents are stored here.
 
-**Why your PC:** GitHub's own machines were refused (HTTP 403) by Radha.name, while a normal browser connection works. A self-hosted runner uses your connection.
+**What works:** page indexing from GitHub Actions (see `crawl-manifest.json`: pages visited, pages still queued, pages refused, candidate file links). The index is partial and its file links include site graphics.
 
-`archiver.py --mode index` finds pages and file links (respects robots.txt for pages, waits 10 s between pages, skips refused pages, stops after 3 refusals in a row). `--mode download` saves files under `/sites/default/files/documents/` to your folder, 3 s apart, skips what is already saved, and stops if the site returns a challenge page or rate-limits. Nothing tries to bypass a challenge.
+**What does not:** downloading document files from GitHub's machines. Radha.name refused those requests with HTTP 403, most likely a bot check on file links (not confirmed). No attempt is made to bypass it.
 
-Note: the site's robots.txt disallows crawlers in `/sites/`, where all documents live. The site itself invites downloads. Downloading is your explicit choice.
-
-Status files: `crawl-manifest.json` (pages, queue, refusals) and `download-summary.json` (counts). A queue or counts below the site's claimed 8,000 items means incomplete.
-
-The workflow template is in `workflow-template/self-hosted.yml` until it is moved into `.github/workflows/`.
+`archiver.py` is the fixed crawler (skips refused pages, stops after 3 refusals in a row). `archive.py` and `.github/workflows/crawl.yml` are the older version and still need to be updated. `workflow-template/self-hosted.yml` needs a runner on your own PC and is unused.
