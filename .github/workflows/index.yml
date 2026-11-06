@@ -1,0 +1,35 @@
+name: Radha index
+on:
+  push:
+    paths: [.github/workflows/index.yml]
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Pages to index this run (1 to 600)
+        type: number
+        default: 300
+permissions:
+  contents: write
+concurrency:
+  group: radha-index
+  cancel-in-progress: false
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - name: Index pages
+        env:
+          LIMIT: ${{ inputs.limit || 300 }}
+        run: python3 archiver.py --mode index --limit "$LIMIT"
+      - name: Save progress notes
+        if: always()
+        run: |
+          git add crawl-manifest.json
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Save index progress"
+            git push
+          fi
