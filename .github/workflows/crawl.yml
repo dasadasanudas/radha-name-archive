@@ -1,0 +1,38 @@
+name: Radha archive pilot
+on:
+  push:
+    branches: [main]
+    paths: [archive.py, .github/workflows/crawl.yml]
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: Maximum pages to discover (1 to 40)
+        required: true
+        type: number
+        default: 20
+permissions:
+  contents: write
+concurrency:
+  group: radha-archive-pilot
+  cancel-in-progress: false
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run bounded crawl and approved downloads
+        env:
+          MAX_PAGES: ${{ inputs.max_pages || 20 }}
+        run: python3 archive.py --max-pages "$MAX_PAGES"
+      - name: Save results
+        if: always()
+        run: |
+          if [ -f crawl-manifest.json ]; then git add crawl-manifest.json; fi
+          if [ -d documents ] && [ -n "$(ls -A documents)" ]; then git add documents; fi
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Save pilot downloads and crawl progress"
+            git push
+          fi
