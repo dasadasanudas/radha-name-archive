@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "visited": [
+    "https://www.radha.name/digital-books"
+  ],
+  "queue": [
+    "https://www.radha.name/",
+    "https://www.radha.name/user",
+    "https://www.radha.name/images-gallery",
+    "https://www.radha.name/holy-places-gallery",
+    "https://www.radha.name/video",
+    "https://www.radha.name/links",
+    "https://www.radha.name/news",
+    "https://www.radha.name/donate-to-wwwradhaname",
+    "https://www.radha.name/node/13476",
+    "https://www.radha.name/digital-books/astrology",
+    "https://www.radha.name/digital-books/ayurveda-and-healt",
+    "https://www.radha.name/digital-books/biography",
+    "https://www.radha.name/digital-books/courses-seminars-study",
+    "https://www.radha.name/digital-books/deity-worship-samskaras",
+    "https://www.radha.name/digital-books/holy-places-in-india",
+    "https://www.radha.name/digital-books/philosphy",
+    "https://www.radha.name/digital-books/practical-application",
+    "https://www.radha.name/digital-books/religion-christianity-buddhism-islam",
+    "https://www.radha.name/digital-books/sastras-acharyas-and-swamis",
+    "https://www.radha.name/digital-books/science",
+    "https://www.radha.name/digital-books/verses-prayers-and-songs",
+    "https://www.radha.name/vaishnava-books",
+    "https://www.radha.name/digital-books-0",
+    "https://www.radha.name/disclaimer"
+  ],
+  "files": {
+    "https://www.radha.name/sites/all/themes/zen/zen/logo.png": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/radha-krishna1.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/radha-krishna2.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/5-tattva.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/header%20radhakrishna%201.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/budha%20paitings.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/devotees_0.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/Khajuraho.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/Radha%20Krishna%20modern.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/Rama%20Hanuman.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/sadhu.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/Prabhupada.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/mahabalipuram.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/Mahamantra.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/imagecache/slideshow290x133/kathakali.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/images/pc%20copy%20with%20my%20web.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/images/hard%20disc%20copy(1).jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/images/Srila%20AC%20Bhaktivedanta%20Swami%20Prabhupada%203.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    },
+    "https://www.radha.name/sites/default/files/images/Comuter%20library/CONTENTS%20OF%20ALL%20DIGITAL%20BOOKS.jpg": {
+      "first_seen_on": "https://www.radha.name/digital-books",
+      "via": "src"
+    }
+  },
+  "pilot": {
+    "Divisions Of Devotion.doc": {
+      "url": "https://www.radha.name/sites/default/files/documents/1244/Divisions%20Of%20Devotion.doc",
+      "status": "blocked",
+      "error": "Site refused https://www.radha.name/sites/default/files/documents/1244/Divisions%20Of%20Devotion.doc (HTTP 403); stopped"
+    }
+  },
+  "errors": [
+    {
+      "stage": "run",
+      "error": "Site refused https://www.radha.name/sites/default/files/documents/1244/Divisions%20Of%20Devotion.doc (HTTP 403); stopped"
+    }
+  ],
+  "robots": {
+    "url": "https://www.radha.name/robots.txt",
+    "crawl_delay_seconds": 10.0,
+    "rule_count": 39
+  },
+  "crawl_status": "blocked_or_failed",
+  "updated_utc": "2026-11-06T15:44:11.680286+00:00",
+  "scope": "Bounded same-site HTML discovery. Only the three explicitly approved files are downloaded."
+}
